@@ -1,0 +1,16 @@
+<section class="section">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Topic</td>
+                <td>Rank</td>
+            </tr>
+        </thead>
+        ${listOfTopics.map(topic => 
+                `<tr>
+                    <td>${topic.topic}</td>
+                    <td>${topic.ranking}</td>
+                </tr>`
+            ).join('')}
+    </table>
+</section>

@@ -1,0 +1,38 @@
+<section class="section">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Topic</td>
+                <td>Rank</td>
+            </tr>
+        </thead>
+        ${listOfTopics.map(topic => 
+                `<tr>
+                    <td>${topic.topic}</td>
+                    <td>${topic.ranking}</td>
+                </tr>`
+            ).join('')}
+    </table>
+</section>
+<section class="section">
+    <form id="update-form" action="/update" method="POST">
+        <select name="topic" id="topic-select">
+            <option value="">--Please choose a topic</option>
+            <option value="HMTL">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Javascript">Javascript</option>
+            <option value="PostgreSQL">PostgreSQL</option>
+            <option value="Node">Node</option>
+            <option value="Express">Express</option>
+        </select>
+        <select name="rank" id="rank">
+            <option value="">--Please select a rank</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</section>
